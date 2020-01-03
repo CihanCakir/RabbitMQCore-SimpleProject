@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RabbitMQ.Client;
 using RabbitMQRT.Producer.Models;
 
 namespace RabbitMQRT.Producer.Controllers
@@ -23,6 +24,23 @@ namespace RabbitMQRT.Producer.Controllers
             return View();
         }
 
+        public IActionResult WordtoPdfPage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult WordtoPdfPage(WordToPdf wordToPdf)
+        {
+
+            return null;
+
+        }
+
+        public IActionResult WordToZip()
+        {
+            return null;
+        }
         public IActionResult Privacy()
         {
             return View();
